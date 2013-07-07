@@ -1,17 +1,20 @@
+fs = require('fs'); 
+
 var express = require('express');
 
 var app = express.createServer(express.logger());
 
-var indexdata
+var indexdata;
+var content;
 
-fs.readFile('/etc/passwd', function (err, indexdata) {
+fs.readFile('./index.html', function (err, indexdata) {
   if (err) throw err;
-  console.log(indexdata);
+  content = indexdata;
 });
 
 app.get('/', function(request, response) {
 //  response.send('Hello World2!');
-response.send(indexdata);
+response.send(content);
 });
 
 var port = process.env.PORT || 5000;
