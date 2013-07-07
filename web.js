@@ -7,7 +7,7 @@ var app = express.createServer(express.logger());
 var content;
 
 function readContent(callback) {
-    fs.readFile("./Index.html", function (err, content) {
+    fs.readFile("./index.html", function (err, content) {
         if (err) return callback(err)
         callback(content)
     })
