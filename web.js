@@ -14,7 +14,7 @@ fs.readFile('./index.html', function (err, indexdata) {
 
 app.get('/', function(request, response) {
 //  response.send('Hello World2!');
-response.send(content);
+callback(content);
 });
 
 var port = process.env.PORT || 5000;
