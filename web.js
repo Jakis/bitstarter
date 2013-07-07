@@ -14,23 +14,5 @@ fs.readFile('./index.html', function (err, html) {
         response.write(html);  
         response.end();
         console.log("Listening on " + port);  
-    }).listen(port);
+    }).listen(5000);
 });
-/*
-fs.readFile('./index.html', function (err, indexdata) {
-  if (err) throw err;
-  content = indexdata;
-});
-*/
-//app.get('/', function(request, response) {
-//  response.send('Hello World2!');
-//callback(content);
-//});
-
-
-/*
-var port = process.env.PORT || 5000;
-app.listen(port, function() {
-  console.log("Listening on " + port);
-});
-*/
