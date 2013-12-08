@@ -4,7 +4,9 @@ var app = express.createServer(express.logger());
 var indexdata;
 var content;
 
-fs.readFile('./index.html', 'utf-8', function (err, indexdata) {
+
+fs.readFile('./index2.html', 'utf-8', function (err, indexdata) {
+//fs.readFile('./index.html', 'utf-8', function (err, indexdata) {
   if (err) throw err;
   content = indexdata;
 });
